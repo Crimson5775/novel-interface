@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator Dashboard - Novel Worlds</title>
+    <link rel="stylesheet" href="translator-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="translator-container">
+        <!-- Sidebar Navigation -->
+        <nav class="translator-sidebar">
+            <div class="translator-profile">
+                <img src="https://via.placeholder.com/50" alt="Translator" class="translator-avatar">
+                <span class="translator-name">Translator Name</span>
+                <span class="translator-status">Active</span>
+            </div>
+            <ul class="translator-menu">
+                <li class="active">
+                    <a href="#dashboard"><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="#my-novels"><i class="fas fa-book"></i> My Novels</a>
+                </li>
+                <li>
+                    <a href="#add-novel"><i class="fas fa-plus"></i> Add Novel</a>
+                </li>
+                <li>
+                    <a href="#translations"><i class="fas fa-language"></i> Translations</a>
+                </li>
+                <li>
+                    <a href="#profile"><i class="fas fa-user"></i> Profile</a>
+                </li>
+                <li class="logout">
+                    <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="translator-main">
+            <!-- Top Bar -->
+            <div class="translator-topbar">
+                <h1>Translator Dashboard</h1>
+                <div class="translator-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">2</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="translator-content">
+                <!-- Quick Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i class="fas fa-book"></i>
+                        <div class="stat-info">
+                            <h3>Active Novels</h3>
+                            <p>5</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-language"></i>
+                        <div class="stat-info">
+                            <h3>Total Chapters</h3>
+                            <p>127</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-eye"></i>
+                        <div class="stat-info">
+                            <h3>Total Views</h3>
+                            <p>25,431</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Novel Management Section -->
+                <section class="novels-section">
+                    <h2>My Novels</h2>
+                    <div class="action-bar">
+                        <button class="add-novel-btn">
+                            <i class="fas fa-plus"></i> Add New Novel
+                        </button>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search novels...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+
+                    <div class="novels-grid">
+                        <div class="novel-card">
+                            <div class="novel-cover">
+                                <img src="https://via.placeholder.com/150x200" alt="Novel Cover">
+                            </div>
+                            <div class="novel-info">
+                                <h3>Novel Title</h3>
+                                <p>Chapters: 45</p>
+                                <p>Views: 12,345</p>
+                                <div class="novel-actions">
+                                    <button class="edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                                    <button class="add-chapter-btn"><i class="fas fa-plus"></i> Add Chapter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- More novel cards -->
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add Novel Modal -->
+    <div class="modal" id="add-novel-modal">
+        <div class="modal-content">
+            <h2>Add New Novel</h2>
+            <form id="add-novel-form">
+                <div class="form-group">
+                    <label>Novel Title</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Cover Image</label>
+                    <input type="file" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label>Genre</label>
+                    <select multiple required>
+                        <option value="action">Action</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="romance">Romance</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="submit-btn">Add Novel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="translator-script.js"></script>
+</body>
+</html>

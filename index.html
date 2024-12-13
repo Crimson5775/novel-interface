@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novel Web Interface</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="active">Home</a>
+                <a href="#">Browse Novels</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-trigger">Categories</a>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fas fa-magic"></i> Fantasy</a>
+                        <a href="#"><i class="fas fa-rocket"></i> Sci-fi</a>
+                        <a href="#"><i class="fas fa-heart"></i> Romance</a>
+                        <a href="#"><i class="fas fa-book"></i> Mystery</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search novels...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#" class="about-link">About</a>
+                    <a href="#" class="contact-link">Contact</a>
+                    <a href="#" class="admin-button" style="display: none;" onclick="window.location.href='/admin/dashboard.html'">
+                        <i class="fas fa-user-shield"></i> Admin Panel
+                    </a>
+                    <a href="#" class="translator-button" style="display: none;" onclick="window.location.href='/translator/dashboard.html'">
+                        <i class="fas fa-language"></i> Translator Panel
+                    </a>
+                </div>
+                <div class="login-dropdown" id="login-section">
+                    <a href="#" class="login-btn"><i class="fas fa-user"></i> Login</a>
+                    <div class="login-dropdown-content">
+                        <form id="login-form" class="login-form">
+                            <div class="form-group">
+                                <input type="text" name="username" placeholder="Username" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" placeholder="Password" required>
+                            </div>
+                            <button type="submit" class="form-btn login-submit">Login</button>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                            <div class="signup-divider">
+                                <span>or</span>
+                            </div>
+                            <button type="button" class="form-btn signup-btn">Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="user-menu" style="display: none;">
+                    <a href="#" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1>Novel Worlds</h1>
+            <p>Explore worlds beyond imagination</p>
+            <button class="cta-button">Start Reading</button>
+        </div>
+    </header>
+
+    <!-- Featured Novels Section -->
+    <section class="featured-novels">
+        <h2>Featured Novels</h2>
+        <div class="novel-grid">
+            <!-- Novel Cards -->
+            <div class="novel-card">
+                <div class="novel-image"></div>
+                <h3>The Lost Kingdom</h3>
+                <p>An epic fantasy adventure in a world of magic.</p>
+                <button class="read-more">Read More</button>
+            </div>
+            <div class="novel-card">
+                <div class="novel-image"></div>
+                <h3>Stellar Dreams</h3>
+                <p>Journey through the stars in this sci-fi masterpiece.</p>
+                <button class="read-more">Read More</button>
+            </div>
+            <div class="novel-card">
+                <div class="novel-image"></div>
+                <h3>Heart's Echo</h3>
+                <p>A touching romance that spans generations.</p>
+                <button class="read-more">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="quick-links">
+                <a href="#">About</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Novel Worlds. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="signup-modal">
+        <div class="modal-content">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" name="password" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="submit-btn">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
